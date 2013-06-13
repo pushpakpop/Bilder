@@ -6,7 +6,7 @@ $user = $facebook->getUser();	//Get facebook User Id
 <html lang="en">
 	<head>
 	<meta charset="utf-8">
-	<title>Fb Albums</title>
+	<title>Bilder</title>
 	<!-- Loading Bootstrap css-->
 	<link href="lib/Flat-UI/css/bootstrap.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,7 @@ $user = $facebook->getUser();	//Get facebook User Id
 	<link type="text/css" href="lib/fancybox/jquery.fancybox.css" rel="stylesheet" />
      <!-- Loading our css -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/bilder.png" />
     
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
 	<!--[if lt IE 9]>
@@ -71,7 +72,7 @@ $user = $facebook->getUser();	//Get facebook User Id
             <label class="no-of-pics">
               <?=$no_images?>
             </label>
-            <a href="javascript:void(0)" onClick="view_album(<?=$album['id'] ?>)" title="view album">
+            <a href="javascript:void(0)" onClick="viewAlbum(<?=$album['id'] ?>)" title="view album">
             <img src="<?=$album_cover?>" alt="<?=$album['id'] ?>" class="<?php if($no_images>0) echo "view-album" ?>" title="View album">
             </a>
             <p class="album-title" title="<?=$album['name']?>">
@@ -101,7 +102,7 @@ $user = $facebook->getUser();	//Get facebook User Id
 						{
 							$params = array(
                                       'scope' => 'user_photos',   //Requesting User Permissions through Facebook App
-                                      'redirect_uri' => 'http://www.umawoodenpallet.com/test-project/bilder/index.php' //User is redirected after Login
+                                      'redirect_uri' => 'http://www.umawoodenpallet.com/rtcamp/bilder/index.php' //User is redirected after Login
                                     );
                                 $login_url = $facebook->getLoginUrl( $params );//Create the Login URL
 								
@@ -120,7 +121,8 @@ $user = $facebook->getUser();	//Get facebook User Id
     </div><!--/.contianer--> 
     
     <!-- Loading jquery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.8.1.min.js"><\/script>')</script>
     <!-- Loading fancybox files -->
 	<script src="lib/fancybox/jquery.fancybox.pack.js"></script>
     <!-- Loading touchswipe files used for navigating the images when user is on a smart phone or tablet -->
