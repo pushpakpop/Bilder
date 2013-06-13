@@ -4,6 +4,7 @@
    Contains the custom styles for bilder app
  */
 	body{
+		background: url(../images/bg.png);
 		}
 	#title{
 		width:50%;
@@ -83,4 +84,7 @@
 		}
 	.fancybox-nav{
 		width:10%;
+		}
+	.tile{
+		background: #FFF;
 		}
