@@ -1,7 +1,21 @@
 Bilder
 ======
 
-A web application that authorizes users through facebook and displays the albums of the authorized user.
-The user can click on any thumb nail of the album and slideshow of the images of the corresponding album opens and user can navigate to different images of the album.
-The user can also click on "Begin Download" button to download the zip of all the images of the corresponding album.
+A web application to view and download facebook albums.
+
+Live demo available [HERE](http://www.umawoodenpallet.com/rtcamp/bilder/index.php).
+
+
+Libraries used
+--------------
+
+For UI : [Flat UI](designmodo.github.io/Flat-UI/), [Bootstrap](http://twitter.github.io/bootstrap/)
+
+For Slidshow : [Fancybox](http://fancybox.net/)
+
+For Touch interaction : [touchSwype](http://labs.rampinteractive.co.uk/touchSwipe/demos/)
+
+API : Facebook PHP SDK
+
+Backend : PHP
 
