@@ -6,10 +6,11 @@
      *@param Id of the album whose images are to be viewed
      */
 
-    function viewAlbum(albumId) {
+    function viewAlbum(albumId,noImages) {
 
         $('#photos').load("album.php", {
                 id: albumId,
+				totalImages : noImages,
                 type: 'slideshow'
             }, // Load the div#photo with the anchor tags having link to the album images
 
@@ -92,8 +93,9 @@
      * Create the zip of the images of the requested album and displays link to the user to download.
      */
     $('.download').click(function () {
-        var albumId = this.id;
-        var albumName = this.title;
+        var albumId = this.id,
+		albumName = this.title,
+		noImages = this.name;
         $('.download').fancybox({
             autoScale: true,
 
@@ -111,6 +113,7 @@
             data: {
                 id: albumId,
                 name: albumName,
+				totalImages: noImages,
                 type: 'download'
             },
             url: "album.php",
