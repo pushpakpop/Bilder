@@ -3,88 +3,94 @@
 
    Contains the custom styles for bilder app
  */
-	body{
-		background: url(../images/bg.png);
+	body {
+		background:  url(../images/bg.png);
 		}
-	#title{
-		width:50%;
-		float:left;
-		min-height:50px;
-		text-align:left;
-		display:inline-block;
+	#title {
+		width: 50%;
+		float: left;
+		min-height: 50px;
+		text-align: left;
+		display: inline-block;
 		}
-	#user-info{
-		width:50%;
-		text-align:right;
-		display:inline-block;
-		margin-top:10px
+	#user-info {
+		width: 50%;
+		text-align: right;
+		display: inline-block;
+		margin-top: 10px
 		}
 
-	#user-info img{
-		width:45px;
-		height:45px;
-		border-radius:42px;
-		float:right;
-		margin:0 0 0 10px;
-		display:inline-block;
+	#user-info img {
+		width: 45px;
+		height: 45px;
+		border-radius: 42px;
+		float: right;
+		margin: 0 0 0 10px;
+		display: inline-block;
 		}
-	#header{
-		margin:30px 0;
+	#header {
+		margin: 30px 0;
 		}
-	#header p{
-		margin-bottom:5px;
+	#header p {
+		margin-bottom: 5px;
 		}
-	.album-list{
-		margin:10px 15px;
-		width:260px;
+	.album-list {
+		margin: 10px 15px;
+		width: 260px;
 		}
-	.album img{
-		height:150px;
-		width:90%;
-		border-radius:6px;
-		margin-top:10px
+	.album img {
+		height: 150px;
+		width: 90%;
+		border-radius: 6px;
+		margin-top: 10px
 		}
-	.album-title{
-		margin:15px 0!important;
+	.album-title {
+		margin: 15px 0!important;
 		}
-	.no-of-pics{
-		padding:5px 8px;
-		border-radius:55px;
-		background-color:#E74C3C;
-		color:#FFFFFF;
-		display:inline-block;
-		position:absolute;
-		left:215px;
-		text-align:center;
-		height:20px;
-		width:16px;
+	.no-of-pics {
+		padding: 5px 8px;
+		border-radius: 55px;
+		background-color: #E74C3C;
+		color: #FFFFFF;
+		display: inline-block;
+		position: absolute;
+		left: 215px;
+		text-align: center;
+		height: 20px;
+		width: 16px;
 		}
-	.span12{
-		margin-left:0;
+	.span12 {
+		margin-left: 0;
 		}
-	.container{
-		text-align:center;
+	.container {
+		text-align: center;
 		}
-	#download-zip{
-		text-align:center;
+	#download-zip {
+		text-align: center;
 		}
-	#loading{
-		margin-top:10px;
+	#loading {
+		margin-top: 10px;
 		}
-	#dlink{
-		margin-top:30px;
+	#dlink {
+		margin-top: 30px;
 		}
-	.fancybox-skin{
-    cursor: e-resize;
+	#footer {
+		border-top: 1px solid #CCC;
+		padding-top: 15px;
+		margin: 20px 0;
 		}
-	#footer{
-		border-top:1px solid #CCC;
-		padding-top:15px;
-		margin:20px 0;
+	.fancybox-nav {
+		width: 10%;
 		}
-	.fancybox-nav{
-		width:10%;
-		}
-	.tile{
+	.tile {
 		background: #FFF;
 		}
+	.album-list:hover {
+		box-shadow: 0px 0px 12px #979797;
+		-webkit-transition: all ease .2s;
+	    -moz-transition: all ease .2s;
+	    -ms-transition: all ease .2s;
+	     -o-transition: all ease .2s;
+	        transition: all ease .2s;
+		}
+	
