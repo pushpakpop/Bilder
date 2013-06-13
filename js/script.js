@@ -12,8 +12,8 @@ function view_album(id){
 					
 					onUpdate:function(){
 						
-						//functions for enabling swipe in touch devices
-						var IMG_WIDTH = 500;
+						//functions for enabling swipe in touch devices //touchSwype
+						var IMG_WIDTH = 500; 
 						var currentImg=0;
 						var speed=500;
 						var imgs;
@@ -81,7 +81,7 @@ function view_album(id){
 							imgs.css("-webkit-transform", "translate3d("+value +"px,0px,0px)");
 						}
 						
-					}
+					} // touchSwpe
 					
 				});
 				$('a.fancybox:first').trigger('click'); // Acts as Click event for First Album photo to start the slideshow
@@ -92,8 +92,6 @@ function view_album(id){
 	$('.download').click(function(){
 		var album_id=this.id;
 		var album_name=this.title;
-		//$('a.download').css('display','none');	// removes the download link for other albums
-		//$('#image'+ album_id).css('display','block'); //Loading image till user is prompt for download option
 		$('.download').fancybox({
 			autoScale : true,
 			
@@ -143,13 +141,10 @@ function view_album(id){
 				if(data=='1')
 				{
 					$(album_id+' btn-name').text('Downlaod Zip');
-					// as soon as zip is created, provide the link to download the album
-				//	$('#download-zip').html("<p id='dlink'><a href='download.php' title='click to download the album'>Download</a> the '"+album_name+"' album </p>");
 				}
 				else
 				{
-					// show the user that some error occured
-					//$('#download-zip').html("Some error occured while creating the zip of photos. Please try again");					
+					alert('some error occured while downloading the zip. Please try again');				
 				}
 			},
 			error: function(){
