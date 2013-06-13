@@ -7,7 +7,6 @@
     readfile('albums.zip');
 	ob_clean();
     flush();
-	//unlink('albums.zip');
 	exit;
 
 ?>

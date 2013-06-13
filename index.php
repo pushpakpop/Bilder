@@ -101,7 +101,7 @@ $user = $facebook->getUser();	//Get facebook User Id
 						{
 							$params = array(
                                       'scope' => 'user_photos',   //Requesting User Permissions through Facebook App
-                                      'redirect_uri' => 'http://www.umawoodenpallet.com/test-project/fbalbums/index.php' //User is redirected after Login
+                                      'redirect_uri' => 'http://www.umawoodenpallet.com/test-project/bilder/index.php' //User is redirected after Login
                                     );
                                 $login_url = $facebook->getLoginUrl( $params );//Create the Login URL
 								
@@ -126,7 +126,7 @@ $user = $facebook->getUser();	//Get facebook User Id
     <!-- Loading touchswipe files used for navigating the images when user is on a smart phone or tablet -->
 	<script src="lib/jquery.touchSwipe.min.js"></script>
     <!--Loading our javascript-->
-    <script type="text/javascript" src="js/fbalbums.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 
 </body>
 </html>
