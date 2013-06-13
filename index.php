@@ -72,14 +72,14 @@ $user = $facebook->getUser();	//Get facebook User Id
             <label class="no-of-pics">
               <?=$no_images?>
             </label>
-            <a href="javascript:void(0)" onClick="viewAlbum(<?=$album['id'] ?>)" title="view album">
+            <a href="javascript:void(0)" onClick="viewAlbum(<?=$album['id'] ?>,<?=$no_images?>)" title="view album">
             <img src="<?=$album_cover?>" alt="<?=$album['id'] ?>" class="<?php if($no_images>0) echo "view-album" ?>" title="View album">
             </a>
             <p class="album-title" title="<?=$album['name']?>">
               <?=substr($album['name'], 0, 21)?>
             </p>
             <div>
-              <a id="<?=$album['id'] ?>" title="<?=$album['name']?>" <?php if($no_images==0) echo "disabled" ?> class="btn btn-primary download" href="#download-zip">Begin Download</a>
+              <a id="<?=$album['id'] ?>" name="<?=$no_images?>" title="<?=$album['name']?>" <?php if($no_images==0) echo "disabled" ?> class="btn btn-primary download" href="#download-zip">Begin Download</a>
             </div>
           </div><!--/.album--> 
         </div><!--/.album-list-->
