@@ -1,10 +1,9 @@
 @charset "utf-8";
 /* CSS Document
 
-   Contains the custom styles for fbalbum app
+   Contains the custom styles for bilder app
  */
 	body{
-		background:url(../images/bg.png) ;
 		}
 	#title{
 		width:50%;
