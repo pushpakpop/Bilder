@@ -1,5 +1,7 @@
 <?php
-if( !isset($_POST['id']) ) // check if album id is exists or not
+$album_id = $_POST['id'];
+$total_images = $_POST['totalImages'];
+if( !isset($album_id) ) // check if album id is exists or not
 	die("You are not authorized to access this page");
 
 ini_set('max_execution_time', 0); // Increase the max execution time as some albums may have too many images which requires more time to create the zip
@@ -7,10 +9,7 @@ ini_set('max_execution_time', 0); // Increase the max execution time as some alb
 //get the app configuration details	
 require_once 'config.php';
 
-		$params = array();
-		$params['fields'] = 'name,source,images';
-		$params = http_build_query($params, null, '&'); //Use to generate a query string
-		$album_photos = $facebook->api("/{$_POST['id']}/photos?$params");// Photos for the corresponding album id are accessed with their name, source and photo itself
+		$album_photos = $facebook->api("/{$album_id}/photos?limit={$total_images}");// Photos for the corresponding album id are accessed with their name, source and photo itself
 		$photos = array();
 		
 		if(!empty($album_photos['data'])) {
